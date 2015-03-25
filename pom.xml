@@ -11,9 +11,119 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
  
-  <properties>
-  
+   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  <dependencyManagement>
+  	<!-- hibernate jar包导入 -->
+  	<dependencies>
+  		<dependency>
+ 		 	 <groupId>org.hibernate</groupId>
+  			<artifactId>hibernate-core</artifactId>
+  			<version>4.2.0.Final</version>
+		</dependency>
+		
+    <dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit</artifactId>
+  		<version>4.10</version>
+  		<scope>test</scope>
+	</dependency>
+
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-test</artifactId>
+		<version>3.2.2.RELEASE</version>
+		<scope>test</scope>
+	</dependency>
+
+	<dependency>
+		<groupId>org.easymock</groupId>
+		<artifactId>easymock</artifactId>
+		<version>3.1</version>
+		<scope>test</scope>
+	</dependency>
+
+	<dependency>
+	  <groupId>org.dbunit</groupId>
+	  <artifactId>dbunit</artifactId>
+	  <version>2.2</version>
+	  <scope>test</scope>
+	</dependency>
+
+	<dependency>
+		<groupId>com.github.springtestdbunit</groupId>
+		<artifactId>spring-test-dbunit</artifactId>
+		<version>1.0.0</version>
+		<scope>test</scope>
+	</dependency>
+
+
+	
+	<!-- 实现依赖注入包-->
+	<dependency>
+		<groupId>javax.inject</groupId>
+		<artifactId>javax.inject</artifactId>
+		<version>1</version>
+	</dependency>
+	<!-- oracle数据库驱动包-->
+	<dependency>
+		<groupId>org.casper.oracle</groupId>
+		<artifactId>ojdbc</artifactId>
+		<version>14.0</version>
+	</dependency>
+	<!-- 数据库连接池-->
+	<dependency>
+		<groupId>commons-dbcp</groupId>
+		<artifactId>commons-dbcp</artifactId>
+		<version>1.4</version>
+	</dependency>
+	
+	<!-- Spring核心包  -->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+		<version>3.2.2.RELEASE</version>
+	</dependency>
+	<!-- Spring的上下文-->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>3.2.2.RELEASE</version>
+	</dependency>
+	<!-- Spring的beans-->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-beans</artifactId>
+		<version>3.2.2.RELEASE</version>
+	</dependency>
+	<!--  Spring-aop 的jar包-->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-aop</artifactId>
+		<version>3.2.2.RELEASE</version>
+	</dependency>
+	<!--  Spring与hibernate整合相关包-->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-orm</artifactId>
+		<version>3.2.2.RELEASE</version>
+	</dependency>
+	<!-- aop需要切面的jar -->
+	<dependency>
+		<groupId>org.aspectj</groupId>
+		<artifactId>aspectjweaver</artifactId>
+		<version>1.7.2</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>1.7.5</version>
+	</dependency>
+    	
+  	</dependencies>
+  </dependencyManagement>
   
   <build>
   	<pluginManagement>
